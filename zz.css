@@ -1,0 +1,146 @@
+*{
+	margin:0;
+	padding: 0;
+}
+
+body{
+	font-family: arial;
+	background-color: black;
+
+}
+
+#nav {
+	background-image:url("gradient.png");
+	background-repeat: no-repeat;
+	
+	float: left;
+	width: 200px;
+	height: 100%;
+	background-size: cover;
+	color:white;
+
+}
+
+
+#bottom{
+	background-image: url("banner.jpg");
+	position: absolute;
+	bottom:0;
+	z-index: 99!important;
+	
+	width: 100%;
+	height: 80px;
+}
+
+#nav ul{
+	padding: 0px;
+	width: 80%;
+	margin: 30px auto;
+	display: block;
+
+}
+
+#nav ul li{
+
+	list-style-type: none;
+	padding-top: 10px;
+	border-top: solid 0.02px;
+	text-align: center;
+	padding-bottom: 30px;
+	font-family: arial;
+}
+
+
+
+
+
+input:focus{
+	outline:none;
+}
+
+input{
+	float:left;
+}
+
+#myProgress {
+	border: solid 0.5px;
+	margin-top: 10px;
+	margin-left: 20px;
+	float: left;
+	height: 10px;
+    width: 80%;
+    background-color: grey;
+    border-radius: 5px;
+}
+#myBar {
+    width: 0%;
+    height: 8px;
+    border-radius: 4px;
+    background-color: green;
+}
+
+#action{
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 60px;
+}
+
+#songinfo
+{
+	color:white;
+	margin-left: 20px;
+	margin-top: 20px;
+	float: left;
+	background-color: transparent;
+	height: 20px;
+	width: 40%;
+}
+
+#search1{
+	margin: 0;
+	padding: 0;
+	float:left;
+	width: calc(100% - 205px);
+	height: calc(100% - 85px);
+}
+
+#list
+{
+
+	overflow:auto;
+	display: none;
+	position: absolute;
+	right: 0px;
+	bottom: 81px;
+	width: 200px;
+	height: 500px;
+	background-color: beige;
+	border: solid 2px;
+	color:blue;
+}
+#list li{
+	
+	padding: 10px;
+	color:black;
+	background-color: white;
+	display: block;
+	border-bottom: solid 1px;
+}
+
+#list li:hover{
+	background-color: black;
+	color:orange;
+}
+
+#listicon{
+	margin-right: 35px;
+	float:right;
+}
+
+#action1{
+	padding: 10px;
+	
+	width: 30px;
+	float:left;
+}
+
