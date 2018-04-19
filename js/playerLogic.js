@@ -33,8 +33,8 @@ audio.onended=function(){
 }
 
 function add(e){
-	alert(e.parentNode.class);
-	songlist.push(e.parentNode.id);
+	alert(e.parentNode.className);
+	songlist.push(e.parentNode.className);
 	document.getElementById("foo").innerHTML="";
 	pushsongs();
 }
