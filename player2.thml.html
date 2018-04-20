@@ -9,12 +9,13 @@
 		<div id="nav">
 			<ul>
 				<li>Songs</li>
-				<li class="Clean">Clean<button onclick="add(this)">Add</button><button onclick="addandplay(this)">Play</button></li>
-				<li class="This Love">This Love<button onclick="add(this)">Add</button><button onclick="addandplay(this)">Play</button></li>
-				<li class="Wonderland">Wonderland<button onclick="add(this)">Add</button><button onclick="addandplay(this)">Play</button></li>
-				<li class="You Are In Love">You Are In Love<button onclick="add(this)">Add</button><button onclick="addandplay(this)">Play</button></li>
-				<li class="Bad Blood">Bad Blood<button onclick="add(this)">Add</button><button onclick="addandplay(this)">Play</button></li>
-				<li class="How You Get The Girl">How You Get The Girl<button onclick="add(this)">Add</button><button onclick="addandplay(this)">Play</button></li>
+				<li class="Clean">Clean<br><br><button onclick="add(this)">Add</button><button onclick="addandplay(this)">Play</button></li>
+				<li class="This Love">This Love<br><br><button onclick="add(this)">Add</button><button onclick="addandplay(this)">Play</button></li>
+				<li class="Wonderland">Wonderland<br><br><button onclick="add(this)">Add</button><button onclick="addandplay(this)">Play</button></li>
+				<li class="You Are In Love">You Are In Love<br><br><button onclick="add(this)">Add</button><button onclick="addandplay(this)">Play</button></li>
+				<li class="Bad Blood">Bad Blood<br><br><button onclick="add(this)">Add</button><button onclick="addandplay(this)">Play</button></li>
+				<li class="How You Get The Girl">How You Get The Girl<br><br><button onclick="add(this)">Add</button><button onclick="addandplay(this)">Play</button></li>
+
 			</ul>
 		</div>
 		<iframe id="search1" src="demo_iframe.html" ></iframe>
@@ -29,9 +30,13 @@
 			<div id="songinfo">
 				<p id="info" >Blank Space - Taylor Swift</p>
 			</div>
+
+			<div id="icons1">
 			<input id ="action1" type="image" src="previous.png" onclick="previous()"></input>
 			<input id ="action1" type="image" src="next.png" onclick="next()"></input>
 			<input id ="action1" type="image" src="loop.png" onclick="changeloopstatus()"></input>
+
+			</div>
 			
 			<img onclick="extract()" id="listicon" src="playlist.png" width="50px" >
 			<div id="myProgress">

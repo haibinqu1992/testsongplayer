@@ -10,12 +10,13 @@ body{
 }
 
 #nav {
+	overflow: auto;
 	background-image:url("gradient.png");
 	background-repeat: no-repeat;
 	
 	float: left;
 	width: 200px;
-	height: 100%;
+	height: calc(100% - 81px);
 	background-size: cover;
 	color:white;
 
@@ -116,7 +117,7 @@ input{
 	height: 500px;
 	background-color: beige;
 	border: solid 2px;
-	color:blue;
+	color:gray;
 }
 #list li{
 	
@@ -133,6 +134,7 @@ input{
 }
 
 #listicon{
+	margin-top: 5px;
 	margin-right: 35px;
 	float:right;
 }
@@ -144,3 +146,19 @@ input{
 	float:left;
 }
 
+@media only screen and (max-width: 550px) {
+    #myBar{
+    	display: none;
+    }
+    #myProgress{
+    	display: none;
+    }
+
+    #icons1{
+    	display: none;
+    }
+}
+
+#foo{
+	font-size: 12px;
+}

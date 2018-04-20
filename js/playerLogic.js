@@ -186,14 +186,18 @@ function pushsongs(){
 			var name=songlist[i];
 			document.getElementById("foo").innerHTML=slist + '<li id="'+ name +'">' + name + '<button onclick="removeli(this)">delete</button></li>';
 			document.getElementById(name).style.background="white";
+			document.getElementById(name).style.cursor="pointer";
 		
 		}
 		else if(i==playindex)
 		{
 			slist=document.getElementById("foo").innerHTML;
 			var name=songlist[i];
-			document.getElementById("foo").innerHTML=slist + '<li id="'+ name +'">' + name + '<button onclick="removeli(this)">delete</button></li>';
-			document.getElementById(name).style.background="blue";
+			document.getElementById("foo").innerHTML=slist + '<li id="'+ name +'">' + name + '<p></P><img src="playing.gif" width="90px"></img>&nbsp&nbsp<button onclick="removeli(this)">delete</button></li>';
+			document.getElementById(name).style.background="black";
+			document.getElementById(name).style.color="white";
+			document.getElementById(name).style.cursor="pointer";
+
 	
 		}
 	}
