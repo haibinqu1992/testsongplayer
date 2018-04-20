@@ -177,14 +177,14 @@ function next(){
 }
 
 function pushsongs(){
-	
+	var i;
 	for(i=0; i<songlist.length; i++)
 	{
 		if(i!==playindex)
 		{
 			slist=document.getElementById("foo").innerHTML;
 			var name=songlist[i];
-			document.getElementById("foo").innerHTML=slist + '<li id="'+ name +'">' + name + '<button onclick="removeli(this)">delete</button></li>';
+			document.getElementById("foo").innerHTML=slist + '<li id="'+ name +'">' + (i+1)+'&nbsp'+ name + '<button onclick="removeli(this)">delete</button></li>';
 			document.getElementById(name).style.background="white";
 			document.getElementById(name).style.cursor="pointer";
 		
@@ -193,7 +193,7 @@ function pushsongs(){
 		{
 			slist=document.getElementById("foo").innerHTML;
 			var name=songlist[i];
-			document.getElementById("foo").innerHTML=slist + '<li id="'+ name +'">' + name + '<p></P><img src="playing.gif" width="90px"></img>&nbsp&nbsp<button onclick="removeli(this)">delete</button></li>';
+			document.getElementById("foo").innerHTML=slist + '<li id="' + name +'">' +(i+1) +'&nbsp'+ name + '<p></P><img src="playing.gif" width="90px"></img>&nbsp&nbsp<button onclick="removeli(this)">delete</button></li>';
 			document.getElementById(name).style.background="black";
 			document.getElementById(name).style.color="white";
 			document.getElementById(name).style.cursor="pointer";
