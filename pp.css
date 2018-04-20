@@ -17,6 +17,7 @@
 }
 
 #search{
+	background-attachment: fixed;
 	float:left;
 	width: 100%;
 	height: 100% ;
@@ -27,7 +28,7 @@
 
 
 
-#albumlist ul li img{
+#songlist ul li img{
 	
 	width: 200px;
 }
@@ -48,7 +49,25 @@
 }
 
 body{
+	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-image: url("gradient1.png");
+}
+
+#songlistpage{
+	opacity: 0.7;
+}
+
+#songlistpage li{
+	padding: 10px;
+	border-bottom: solid 1px;
+	background: black;
+	display: block;
+	color:white;
+
+}
+
+#songlistpage li:hover{
+	background-color: blue;
 }

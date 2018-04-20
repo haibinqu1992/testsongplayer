@@ -12,74 +12,77 @@ var playindex=0;
 audio.src=dir+songlist[playindex]+ext;
 audio.play();
 document.getElementById("info").innerHTML=songlist[playindex];
-audio.onended=function(){
-	if(playindex==songlist.length-1 &&loopstatus=="off")
-	{
-		playindex=0;
-		audio.src=dir+songlist[playindex]+ext;
-		audio.play();
-		document.getElementById("info").innerHTML=songlist[playindex];
-		document.getElementById("foo").innerHTML="";
-		pushsongs();
-	}
-
-	else if(playindex!=songlist.length-1 &&loopstatus=="off")
-	{
-		playindex++;
-		audio.src=dir+songlist[playindex]+ext;
-		audio.play();
-		document.getElementById("info").innerHTML=songlist[playindex];
-		document.getElementById("foo").innerHTML="";
-		pushsongs();
-	}
-
-	else if(playindex!=songlist.length-1 &&loopstatus=="on")
-	{
-				audio.src=dir+songlist[playindex]+ext;
-		audio.play();
-		document.getElementById("info").innerHTML=songlist[playindex];
-		document.getElementById("foo").innerHTML="";
-		pushsongs();
-	}
-
-	else if(playindex==songlist.length-1 &&loopstatus=="on")
-	{
 		
-		audio.src=dir+songlist[playindex]+ext;
-		audio.play();
-		document.getElementById("info").innerHTML=songlist[playindex];
-		document.getElementById("foo").innerHTML="";
-		pushsongs();
+
+	audio.onended=function()
+	{
+		if(playindex==songlist.length-1 &&loopstatus=="off")
+		{
+			playindex=0;
+			audio.src=dir+songlist[playindex]+ext;
+			audio.play();
+			document.getElementById("info").innerHTML=songlist[playindex];
+			document.getElementById("foo").innerHTML="";
+			pushsongs();
+		}
+
+		else if(playindex!=songlist.length-1 &&loopstatus=="off")
+		{
+			playindex++;
+			audio.src=dir+songlist[playindex]+ext;
+			audio.play();
+			document.getElementById("info").innerHTML=songlist[playindex];
+			document.getElementById("foo").innerHTML="";
+			pushsongs();
+		}
+
+		else if(playindex!=songlist.length-1 &&loopstatus=="on")
+		{
+			audio.src=dir+songlist[playindex]+ext;
+			audio.play();
+			document.getElementById("info").innerHTML=songlist[playindex];
+			document.getElementById("foo").innerHTML="";
+			pushsongs();
+		}
+
+		else if(playindex==songlist.length-1 &&loopstatus=="on")
+		{
+			
+			audio.src=dir+songlist[playindex]+ext;
+			audio.play();
+			document.getElementById("info").innerHTML=songlist[playindex];
+			document.getElementById("foo").innerHTML="";
+			pushsongs();
+		}
+
+
 	}
-
-
-}
 
 
 
 function changeloopstatus()
-{
-	if(loopstatus=="on")
 	{
-	loopstatus="off";
-	alert("loop off!")
-	}
-	else if(loopstatus=="off")
-	{
-		loopstatus="on";
-		alert("loop on!")
-	}
+		if(loopstatus=="on")
+		{
+		loopstatus="off";
+		alert("loop off!")
+		}
+		else if(loopstatus=="off")
+		{
+			loopstatus="on";
+			alert("loop on!")
+		}
 	
-}
+	}
 
 
 
 function addandplay(e){
 var status='nexist';
 
-for(var i=0; i<songlist.length;i++)
+for(var i=0; i<parent.songlist.length;i++)
 {
-	if(e.parentNode.className==songlist[i])
+	if(e.parentNode.className==parent.songlist[i])
 	{
 		status='exist';
 		break;
@@ -92,13 +95,15 @@ if(status=='exist'){
 }
 else{
 	
-	songlist.push(e.parentNode.className);
-	document.getElementById("foo").innerHTML="";
-	playindex=songlist.length-1;
-	audio.src=dir+songlist[playindex]+ext;
-	document.getElementById("info").innerHTML=songlist[playindex];
-	audio.play();
-	pushsongs();
+	parent.songlist.push(e.parentNode.className);
+	parent.document.getElementById("foo").innerHTML="";
+	parent.playindex=parent.songlist.length-1;
+	parent.audio.src=dir+parent.songlist[parent.playindex]+ext;
+
+	parent.document.getElementById("info").innerHTML=parent.songlist[parent.playindex];
+	parent.audio.play();
+	parent.pushsongs();
+
 }
 }
 
@@ -108,9 +113,9 @@ else{
 function add(e){
 var status='nexist';
 
-for(var i=0; i<songlist.length;i++)
+for(var i=0; i<parent.songlist.length;i++)
 {
-	if(e.parentNode.className==songlist[i])
+	if(e.parentNode.className==parent.songlist[i])
 	{
 		status='exist';
 		break;
@@ -123,9 +128,9 @@ if(status=='exist'){
 }
 else{
 	
-	songlist.push(e.parentNode.className);
-	document.getElementById("foo").innerHTML="";
-	pushsongs();
+	parent.songlist.push(e.parentNode.className);
+	parent.document.getElementById("foo").innerHTML="";
+	parent.pushsongs();
 }
 }
 function previous(){
