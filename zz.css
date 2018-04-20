@@ -145,6 +145,34 @@ input{
 	width: 30px;
 	float:left;
 }
+#action1:hover{
+transform:scale(1.2);
+}
+
+
+
+#action2{
+	padding: 10px;
+	
+	width: 30px;
+	float:left;
+}
+
+#action2:hover{
+transform:scale(1.2);
+}
+
+
+
+#action3{
+	padding: 10px;
+	
+	width: 30px;
+	float:left;
+}
+#action3:hover{
+transform:scale(1.2);
+}
 
 @media only screen and (max-width: 550px) {
     #myBar{
