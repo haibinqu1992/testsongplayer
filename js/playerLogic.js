@@ -4,14 +4,16 @@ var dir="songs/";
 var ext=".m4a";
 audio=new Audio();
 var songlist=["Welcome To New York","Blank Space", "Style", "Out of The Woods", "All You Had To Do Was Stay", "Shake It Off", "I Wish You Would"];
-mylist=document.getElementById("list");
+mylist=document.getElementById("foo");
 mylist.addEventListener("click", changesong);
+
 document.getElementById("myProgress").addEventListener("click",barclick);
 var z=false;
 var playindex=0;
 audio.src=dir+songlist[playindex]+ext;
 audio.play();
 document.getElementById("info").innerHTML=songlist[playindex];
+
 		
 
 	audio.onended=function()
@@ -198,8 +200,10 @@ function pushsongs(){
 		{
 			slist=document.getElementById("foo").innerHTML;
 			var name=songlist[i];
-			document.getElementById("foo").innerHTML=slist + '<li id="' + name +'">' +(i+1) +'&nbsp'+ name + '<p></P><img src="playing.gif" width="90px"></img>&nbsp&nbsp<button onclick="removeli(this)">delete</button></li>';
+			document.getElementById("foo").innerHTML=slist + '<li id="' + name +'">' +(i+1) +'&nbsp'+ name + '<p></P>&nbsp&nbsp<button onclick="removeli(this)">delete</button></li>';
 			document.getElementById(name).style.background="black";
+			document.getElementById(name).style.backgroundImage="url('playing.gif')";
+			document.getElementById(name).style.fontStyle="italic";
 			document.getElementById(name).style.color="white";
 			document.getElementById(name).style.cursor="pointer";
 
@@ -322,6 +326,8 @@ function extract(){
 		z=false;
 	}
 }
+
+
 
 pushsongs();
 barplay();
